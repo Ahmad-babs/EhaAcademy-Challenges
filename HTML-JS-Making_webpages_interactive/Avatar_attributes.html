@@ -58,6 +58,28 @@
             var height = 200;
             avatarEls[i].style.height = height + "px";
          }
+
+         // Get all elements with class "tooltip"
+        const tooltips = document.querySelectorAll('img title');
+
+        // Iterate through each tooltip element
+        tooltips.forEach(tooltip => {
+        // Get the tooltip text element
+        const tooltipText = tooltip.querySelector('title');
+
+        // Show tooltip on mouse enter
+        tooltip.addEventListener('mouseenter', () => {
+        tooltipText.style.visibility = 'visible';
+        tooltipText.style.opacity = '1';
+        });
+
+        // Hide tooltip on mouse leave
+        tooltip.addEventListener('mouseleave', () => {
+        tooltipText.style.visibility = 'hidden';
+        tooltipText.style.opacity = '0';
+        });
+        });
+
         </script>
     </body>
 </html>
