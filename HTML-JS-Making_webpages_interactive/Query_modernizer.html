@@ -20,10 +20,19 @@
     
     <script>
         var dothEls = document.querySelectorAll(".doth");
-        dothEls.innerHTML = "does";
+        //dothEls.innerHTML = "does";
 
         for (var i = 0; i < dothEls.length; i++) {
-            dothEls[i].innerHTML = "does";
+            var initialText = dothEls[i].innerHTML;
+            // if  (initialText == "Doth") {
+            //     dothEls[i].innerHTML = "Does";
+            // } else {
+            //     dothEls[i].innerHTML = "does";
+            // }
+
+            initialText == "Doth" ? dothEls[i].innerHTML = "Does" : dothEls[i].innerHTML = "does";
+            
+            
         }
         
     </script>

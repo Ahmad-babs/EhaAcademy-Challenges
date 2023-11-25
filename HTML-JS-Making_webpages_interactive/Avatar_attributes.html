@@ -24,7 +24,7 @@
                 </ul>
             </td>
             <td>
-                <img src="https://www.kasandbox.org/programming-images/avatars/marcimus.png" id="avatar-1" alt="Marcimus, A pink, innocent avatar" title="An innocent avatar">
+                <img src="https://www.kasandbox.org/programming-images/avatars/marcimus.png" id="avatar-1" alt="Marcimus, A pink, innocent avatar">
             </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
                 </ul>
             </td>
             <td>
-                <img src="https://www.kasandbox.org/programming-images/avatars/old-spice-man.png" id="avatar-2" alt="Old Spice Mann, A green, angry avatar" title="An angry avatar">
+                <img src="https://www.kasandbox.org/programming-images/avatars/old-spice-man.png" id="avatar-2" alt="Old Spice Mann, A green, angry avatar">
             </td>
         </tr>
         <tr>
@@ -46,7 +46,7 @@
                 </ul>
             </td>
             <td>
-                <img src="https://www.kasandbox.org/programming-images/avatars/orange-juice-squid.png" id="avatar-3" alt="Orange Juice Squid, An orange, multi-legged avatar" title="multi-legged orange Juice">
+                <img src="https://www.kasandbox.org/programming-images/avatars/orange-juice-squid.png" id="avatar-3" alt="Orange Juice Squid, An orange, multi-legged avatar">
             </td>
         </tr>
         </tbody>
@@ -57,28 +57,31 @@
          for (var i = 0; i < avatarEls.length; i++) {
             var height = 200;
             avatarEls[i].style.height = height + "px";
+            //avatarEls[i].style.title = "px";
+            var alt = avatarEls[i].alt
+            avatarEls[i].setAttribute("title", alt);
          }
 
-         // Get all elements with class "tooltip"
-        const tooltips = document.querySelectorAll('img title');
+        //  // Get all elements with class "tooltip"
+        // const tooltips = document.querySelectorAll('img title');
 
-        // Iterate through each tooltip element
-        tooltips.forEach(tooltip => {
-        // Get the tooltip text element
-        const tooltipText = tooltip.querySelector('title');
+        // // Iterate through each tooltip element
+        // tooltips.forEach(tooltip => {
+        // // Get the tooltip text element
+        // const tooltipText = tooltip.querySelector('title');
 
-        // Show tooltip on mouse enter
-        tooltip.addEventListener('mouseenter', () => {
-        tooltipText.style.visibility = 'visible';
-        tooltipText.style.opacity = '1';
-        });
+        // // Show tooltip on mouse enter
+        // tooltip.addEventListener('mouseenter', () => {
+        // tooltipText.style.visibility = 'visible';
+        // tooltipText.style.opacity = '1';
+        // });
 
-        // Hide tooltip on mouse leave
-        tooltip.addEventListener('mouseleave', () => {
-        tooltipText.style.visibility = 'hidden';
-        tooltipText.style.opacity = '0';
-        });
-        });
+        // // Hide tooltip on mouse leave
+        // tooltip.addEventListener('mouseleave', () => {
+        // tooltipText.style.visibility = 'hidden';
+        // tooltipText.style.opacity = '0';
+        // });
+        //});
 
         </script>
     </body>
